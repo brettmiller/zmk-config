@@ -35,7 +35,7 @@ COMBO(xcDash,     &kp MINUS,     26 27)
 COMBO(mcUnds,     &kp UNDS,      22 23)
 COMBO(uiEsc,      &kp ESC,       6 7)
 COMBO(ioPipe,     &kp PIPE,      7 8)
-COMBO(jkCol,      &kp COLN,      16 17)
+COMBO_L(jkCol,    &kp COLN,      16 17, BASE)
 COMBO(fa1EH,      &sk LS(LCTRL), 13 10) // OSM EH(shift+ctrl) on left home row (matching mods)
 COMBO(jcln1EH,    &sk RS(RCTRL), 16 19) // OSM EH(shift+ctrl) on right home row (matching mods)
 COMBO(fvDquot,    &kp DQT,       13 23) // double quote
@@ -52,7 +52,7 @@ COMBO(olBang,     &kp EXCL,      7 17)  // !
 COMBO(pclnTild,   &kp TILDE,     9 19)  // ~
 COMBO(comperBsls, &kp BSLH,      27 28) //
 COMBO(jmAmp,      &kp AMPR,      16 26) // &
-COMBO_L(navEnter,   &kp ENTER,     16 17, NUM) // nav layer Enter on jk (down & up on nav)
+COMBO_L(navEnter, &kp ENTER,     16 17, NUM) // nav layer Enter on jk (down & up on nav)
 
 //SUBS(bothquote,  "''"SS_TAP(X_LEFT),   16, 18) // '' with cursor in between
 //SUBS(bothdquote, "\"\""SS_TAP(X_LEFT), 6 8) // "" with cursor in between

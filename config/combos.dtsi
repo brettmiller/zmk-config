@@ -50,7 +50,7 @@ COMBO(yhCaret,    &kp CARET,     15 16) // ^
 COMBO(klDlr,      &kp DLLR,      17 18) // $
 COMBO(olBang,     &kp EXCL,      7 17)  // !
 COMBO(pclnTild,   &kp TILDE,     9 19)  // ~
-COMBO(comperBsls, &kp BSLS,      27 28) //
+COMBO(comperBsls, &kp BSLH,      27 28) //
 COMBO(jmAmp,      &kp AMPR,      16 26) // &
 COMBO_L(navEnter,   &kp ENTER,     16 17, NUM) // nav layer Enter on jk (down & up on nav)
 

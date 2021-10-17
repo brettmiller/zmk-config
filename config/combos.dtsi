@@ -12,13 +12,18 @@
 
 compatible = "zmk,combos";
 
-#define COMBO(NAME, BINDINGS, KEYPOS, LAYERS) \
+// global combos (on all layers)
+#define COMBO(NAME, BINDINGS, KEYPOS) \
+  combo_##NAME { \ bindings = <BINDINGS>; \
+    key-positions = <KEYPOS>; \
+  };
+
+// combos on defined layer
+#define COMBO_L(NAME, BINDINGS, KEYPOS, LAYERS) \
   combo_##NAME { \ bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
     layers = <LAYERS>; \
   };
-
-COMBO(undo, &kp LC(Z), 20 21, BASE)
 
 COMBO(asEsc,      &kp ESC,       10 11)
 COMBO(weCaps,     &kp CAPS,      1 2)
@@ -31,23 +36,23 @@ COMBO(mcUnds,     &kp UNDS,      22 23)
 COMBO(uiEsc,      &kp ESC,       6 7)
 COMBO(ioPipe,     &kp PIPE,      7 8)
 COMBO(jkCol,      &kp COLN,      16 17)
-COMBO(fa1EH,      &sk LS(LCTRL), 13 10)   // OSM EH(shift+ctrl) on left home row (matching mods)
+COMBO(fa1EH,      &sk LS(LCTRL), 13 10) // OSM EH(shift+ctrl) on left home row (matching mods)
 COMBO(jcln1EH,    &sk RS(RCTRL), 16 19) // OSM EH(shift+ctrl) on right home row (matching mods)
 COMBO(fvDquot,    &kp DQT,       13 23) // double quote
-COMBO(wsAt,       &kp AT,        1 11) // @
-COMBO(edHash,     &kp HASH,      2 12) // #
-COMBO(rfEqual,    &kp EQL,       3 13) // =
-COMBO(tgPerc,     &kp PRCNT,     4 14) // %
-COMBO(yhGrv,      &kp GRAVE,     5 15) // `
-COMBO(jmQuot,     &kp SQT,       6 16) // single quote
-COMBO(ikSplat,    &kp ASTRK,     8 18) // *
+COMBO(wsAt,       &kp AT,        1 11)  // @
+COMBO(edHash,     &kp HASH,      2 12)  // #
+COMBO(rfEqual,    &kp EQL,       3 13)  // =
+COMBO(tgPerc,     &kp PRCNT,     4 14)  // %
+COMBO(yhGrv,      &kp GRAVE,     5 15)  // `
+COMBO(jmQuot,     &kp SQT,       6 16)  // single quote
+COMBO(ikSplat,    &kp ASTRK,     8 18)  // *
 COMBO(yhCaret,    &kp CARET,     15 16) // ^
 COMBO(klDlr,      &kp DLLR,      17 18) // $
-COMBO(olBang,     &kp EXCL,      7 17) // !
-COMBO(pclnTild,   &kp TILDE,     9 19) // ~
+COMBO(olBang,     &kp EXCL,      7 17)  // !
+COMBO(pclnTild,   &kp TILDE,     9 19)  // ~
 COMBO(comperBsls, &kp BSLS,      27 28) //
 COMBO(jmAmp,      &kp AMPR,      16 26) // &
-COMBO(navEnter,   &kp ENTER,     16 17, NUM) // nav layer Enter on jk (down & up on nav)
+COMBO_L(navEnter,   &kp ENTER,     16 17, NUM) // nav layer Enter on jk (down & up on nav)
 
 //SUBS(bothquote,  "''"SS_TAP(X_LEFT),   16, 18) // '' with cursor in between
 //SUBS(bothdquote, "\"\""SS_TAP(X_LEFT), 6 8) // "" with cursor in between

@@ -22,7 +22,7 @@
 
     combos {
       #include "combos.dtsi"
-  };
+    };
 
     behaviors {
         hm: homerow_mods {

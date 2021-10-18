@@ -53,6 +53,7 @@ COMBO(pclnTild,   &kp TILDE,     9 19)  // ~
 COMBO(comperBsls, &kp BSLH,      27 28) //
 COMBO(jmAmp,      &kp AMPS,      16 26) // &
 COMBO_L(navEnter, &kp ENTER,     16 17, NUM) // nav layer Enter on jk (down & up on nav)
+COMBO(bt_clr,     &kp BT_CLR,    20  21  22  23 // clear Bluetooth bond info for current profile
 
 //SUBS(bothquote,  "''"SS_TAP(X_LEFT),   16, 18) // '' with cursor in between
 //SUBS(bothdquote, "\"\""SS_TAP(X_LEFT), 6 8) // "" with cursor in between

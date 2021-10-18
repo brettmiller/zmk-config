@@ -14,13 +14,13 @@ compatible = "zmk,combos";
 
 // global combos (on all layers)
 #define COMBO(NAME, BINDINGS, KEYPOS) \
-  combo_##NAME { \ bindings = <BINDINGS>; \
+  combo_##NAME { bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
   };
 
 // combos on defined layer
 #define COMBO_L(NAME, BINDINGS, KEYPOS, LAYERS) \
-  combo_##NAME { \ bindings = <BINDINGS>; \
+  combo_##NAME { bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
     layers = <LAYERS>; \
   };
@@ -51,7 +51,7 @@ COMBO(klDlr,      &kp DLLR,      17 18) // $
 COMBO(olBang,     &kp EXCL,      7 17)  // !
 COMBO(pclnTild,   &kp TILDE,     9 19)  // ~
 COMBO(comperBsls, &kp BSLH,      27 28) //
-COMBO(jmAmp,      &kp AMPR,      16 26) // &
+COMBO(jmAmp,      &kp AMPS,      16 26) // &
 COMBO_L(navEnter, &kp ENTER,     16 17, NUM) // nav layer Enter on jk (down & up on nav)
 
 //SUBS(bothquote,  "''"SS_TAP(X_LEFT),   16, 18) // '' with cursor in between

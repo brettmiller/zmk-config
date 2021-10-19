@@ -53,9 +53,9 @@ COMBO(comperBsls, &kp BSLH,      27 28) //
 COMBO(jmAmp,      &kp AMPS,      16 26) // &
 COMBO_L(navEnter, &kp ENTER,     16 17, NUM) // nav layer Enter on jk (down & up on nav)
 COMBO(bt_clr,     &bt BT_CLR,    20  21  22  23) // clear Bluetooth bond info for current profile
-COMBO(bt_0,       &bt BT_SEL\ 0   20  21  22) // Set Bluetooth profile to #
-COMBO(bt_1,       &bt BT_SEL\ 1   21  22  23) // Set Bluetooth profile to #
-COMBO(bt_2,       &bt BT_SEL\ 0   22  23  24) // Set Bluetooth profile to #
+COMBO(bt_0,       &bt BT_SEL 0,  20  21  22) // Set Bluetooth profile to #
+COMBO(bt_1,       &bt BT_SEL 1,  21  22  23) // Set Bluetooth profile to #
+COMBO(bt_2,       &bt BT_SEL 2,  22  23  24) // Set Bluetooth profile to #
 
 //SUBS(bothquote,  "''"SS_TAP(X_LEFT),   16, 18) // '' with cursor in between
 //SUBS(bothdquote, "\"\""SS_TAP(X_LEFT), 6 8) // "" with cursor in between

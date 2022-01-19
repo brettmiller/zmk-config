@@ -37,6 +37,18 @@ combos {
     layers = <NUM>;
   };
 
+// define several combos directly b/c they trample each other when define w/ macro and work defining directly
+  combo_jmAmp { bindings = <&kp AMPS>; // &
+    key-positions = <16 26>;
+  };
+
+  combo_hjCaret { bindings = <&kp CARET>; // ^
+    key-positions = <15 16>;
+   };
+
+  combo_jmQuot { bindings = <&kp SQT>;  // single quote
+    key-positions = <6 16>;
+  };
 
   COMBO(fa1EH,      &sk LS(LCTRL), 10 13) // OSM EH(shift+ctrl) on left home row (matching mods)
   COMBO(jcln1EH,    &sk RS(RCTRL), 16 19) // OSM EH(shift+ctrl) on right home row (matching mods)
@@ -47,7 +59,7 @@ combos {
   COMBO(rfEqual,    &kp EQUAL,     3 13)  // =
   COMBO(tgPerc,     &kp PRCNT,     4 14)  // %
   COMBO(yhGrv,      &kp GRAVE,     5 15)  // `
-  COMBO(jmQuot,     &kp SQT,       6 16)  // single quote
+  // COMBO(jmQuot,     &kp SQT,       6 16)  // single quote
   COMBO(uiEsc,      &kp ESC,       6 7)
   COMBO(ioPipe,     &kp PIPE,      7 8)   // |
   COMBO(olBang,     &kp EXCL,      7 17)  // !
@@ -58,18 +70,18 @@ combos {
   COMBO(dfDel,      &kp DEL,       12 13)
   COMBO(mtparens,   &mt RPAR LPAR, 12 23) // tapped (, held )
   COMBO(fgTab,      &kp TAB,       13 14)
-  COMBO(yhCaret,    &kp CARET,     15 16) // ^
-  COMBO(jmAmp,      &kp AMPS,      16 26) // &
-  //COMBO_L(jkCol,    &kp COLN,      16 17, BASE) // :
-  //COMBO_L(numEnter, &kp ENTER,     16 17, NUM) // num/nav layer Enter on jk (down & up on num)
+  // COMBO(hjCaret,    &kp CARET,     15 16) // ^
+  // COMBO(jmAmp,      &kp AMPS,      16 26) // &
   COMBO(klDlr,      &kp DLLR,      17 18) // $
   COMBO(dquotes,    &kp DQT,       17 26) // "
   COMBO(lSclnBspc,  &kp BSPC,      18 19)
   COMBO(mcUnds,     &kp UNDER,     22 23) // _
   COMBO(xcDash,     &kp MINUS,     26 27) // -
   COMBO(comperBsls, &kp BSLH,      27 28) // \
+  // COMBO_L(jkCol,    &kp COLN,      16 17, BASE) // :
+  // COMBO_L(numEnter, &kp ENTER,     16 17, NUM) // num/nav layer Enter on jk (down & up on num)
 
-  COMBO(bothquote,   &macro_quotes,   16 18) // '' with cursor in between
+  COMBO(bothquote,   &macro_quotes,   16 18) // '' with cursor in between  **doesn't work b/c of homerow mods?**
   COMBO(bothquote2,  &macro_quotes,   26 18) // '' with cursor in between
   COMBO(bothdquote,  &macro_dquotes,  6 8) // "" with cursor in between
   COMBO(bothbrc,     &macro_braces,   1 3) // {} with cursor in between

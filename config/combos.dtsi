@@ -2,12 +2,12 @@
      q   w   e   r   t      y   u   i   o   p
      a   s   d   f   g      h   j   k   l   ;
      z   x   c   v   b      n   m   ,   .   /
-  ╭────────────────────╮ ╭────────────────────╮
-  │  0   1   2   3   4 │ │  5   6   7   8   9 │
-  │ 10  11  12  13  14 │ │ 15  16  17  18  19 │
-  │ 20  21  22  23  24 │ │ 25  26  27  28  29 │
-  ╰───────────╮ 30  31 │ │ 32  33 ╭───────────╯
-              ╰────────╯ ╰────────╯            */
+  .--------------------. .--------------------.
+  |  0   1   2   3   4 | |  5   6   7   8   9 |
+  | 10  11  12  13  14 | | 15  16  17  18  19 |
+  | 20  21  22  23  24 | | 25  26  27  28  29 |
+  '-----------. 30  31 | | 32  33 .-----------'
+              '--------' '--------'            */
 
 combos {
   compatible = "zmk,combos";
@@ -18,12 +18,25 @@ combos {
       key-positions = <KEYPOS>; \
     };
 
-  // combos on defined layer
+  // combos on defined layer(s)
   #define COMBO_L(NAME, BINDINGS, KEYPOS, LAYERS) \
     combo_##NAME { bindings = <BINDINGS>; \
       key-positions = <KEYPOS>; \
       layers = <LAYERS>; \
     };
+
+  // can't get the COMBO_L macro to work correctly (only the first one defined works)
+  // defining per layer combos here, w/o the macro, until that can be resolved
+  combo_jkCol { bindings = <&kp COLN>; // :
+    key-positions = <16 17>;
+    layers = <BASE>;
+  };
+
+  combo_navEnter { bindings = <&kp ENTER>;  // nav layer Enter on jk (down & up on nav)
+    key-positions = <16 17>; 
+    layers = <NUM>;
+  };
+
 
   COMBO(fa1EH,      &sk LS(LCTRL), 10 13) // OSM EH(shift+ctrl) on left home row (matching mods)
   COMBO(jcln1EH,    &sk RS(RCTRL), 16 19) // OSM EH(shift+ctrl) on right home row (matching mods)
@@ -47,8 +60,8 @@ combos {
   COMBO(fgTab,      &kp TAB,       13 14)
   COMBO(yhCaret,    &kp CARET,     15 16) // ^
   COMBO(jmAmp,      &kp AMPS,      16 26) // &
-  COMBO_L(jkCol,    &kp COLN,      16 17, BASE) // :
-  COMBO_L(navEnter, &kp ENTER,     16 17, NUM) // nav layer Enter on jk (down & up on nav)
+  //COMBO_L(jkCol,    &kp COLN,      16 17, BASE) // :
+  //COMBO_L(numEnter, &kp ENTER,     16 17, NUM) // num/nav layer Enter on jk (down & up on num)
   COMBO(klDlr,      &kp DLLR,      17 18) // $
   COMBO(dquotes,    &kp DQT,       17 26) // "
   COMBO(lSclnBspc,  &kp BSPC,      18 19)

@@ -25,7 +25,7 @@ combos {
       layers = <LAYERS>; \
     };
 
-  // can't get the COMBO_L macro to work correctly (only the first one defined works)
+  // Can't get the COMBO_L macro to work correctly (only the first one defined works)
   // defining per layer combos here, w/o the macro, until that can be resolved
   combo_jkCol { bindings = <&kp COLN>; // :
     key-positions = <16 17>;
@@ -37,7 +37,7 @@ combos {
     layers = <NUM>;
   };
 
-// define several combos directly b/c they trample each other when define w/ macro and work defining directly
+// Define several combos directly b/c they trample each other when define w/ macro and work defining directly. NFI why
   combo_jmAmp { bindings = <&kp AMPS>; // &
     key-positions = <16 26>;
   };

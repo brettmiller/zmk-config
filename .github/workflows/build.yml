@@ -2,8 +2,7 @@ on: [push, pull_request, workflow_dispatch]
 
 name: Build
 
-jobs:
-  matrix:
+jobs: matrix:
     runs-on: ubuntu-latest
     name: Fetch Build Keyboards
     outputs:
@@ -22,7 +21,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: zmkfirmware/zmk-build-arm:2.5
+      image: zmkfirmware/zmk-build-arm:3.0
     needs: matrix
     name: Build
     strategy:

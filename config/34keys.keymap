@@ -59,7 +59,7 @@
       };
 
       num_layer {
-        // numbers, navigation, & "math" symbol
+        // numbers, navigation, & "math" symbols (layer 1)
         label = "NUM";
         bindings = <
           &kp N1 &kp N2    &kp N3  &kp N4    &kp N5          &kp N6   &kp N7    &kp N8    &kp N9   &kp N0
@@ -70,6 +70,7 @@
       }; 
 
       symbols_layer {
+        // symbols (layer 2)
         label = "SYM";
         bindings = <
           &kp EXCL  &kp AT    &kp LBRC &kp RBRC &kp PIPE   &kp GRAVE &kp UNDER &kp ASTRK &kp PIPE &kp TILDE
@@ -80,6 +81,7 @@
       };  
  
       adjust_layer {
+        // adjust, F keys, media keys, zmk BT (layer 3)
         label = "ADJ";
         bindings = <
           &kp F1      &kp F2       &kp F3       &kp F4       &kp F5     &kp F6     &kp F7       &kp F8       &kp F9     &kp F10

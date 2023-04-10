@@ -33,7 +33,7 @@ combos {
   };
 
   combo_navEnter { bindings = <&kp ENTER>;  // nav layer Enter on jk (down & up on nav)
-    key-positions = <16 17>; 
+    key-positions = <16 17>;
     layers = <NUM>;
   };
 
@@ -53,7 +53,8 @@ combos {
   COMBO(fa1EH,      &sk LS(LCTRL), 10 13) // OSM EH(shift+ctrl) on left home row (matching mods)
   COMBO(jcln1EH,    &sk RS(RCTRL), 16 19) // OSM EH(shift+ctrl) on right home row (matching mods)
   COMBO(fvDquot,    &kp DQT,       13 23) // double quote
-  COMBO(weCaps,     &caps_word,      1 2)
+  COMBO(weCaps,     &caps_word,    1 2)
+  COMBO(qaTild,     &kp TILDE,     0 10)  // ~ (2nd ~ on left/opposite side, combo unused so ...)
   COMBO(wsAt,       &kp AT,        1 11)  // @
   COMBO(edHash,     &kp HASH,      2 12)  // #
   COMBO(rfEqual,    &kp EQUAL,     3 13)  // =

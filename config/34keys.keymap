@@ -26,7 +26,7 @@
     continue-list = <UNDERSCORE MINUS BSPC>;
 };
 
-/ { 
+/ {
 
     behaviors {
       #include "macros.dtsi"
@@ -67,7 +67,7 @@
           &trans &kp EQUAL &kp DOT &kp ASTRK &kp FSLH        &kp HOME &kp PG_DN &kp PG_UP &kp END  &kp ESC
                                 &lt 3 ESC &sk LS(LCTRL)   &trans   &trans
         >;
-      }; 
+      };
 
       symbols_layer {
         // symbols (layer 2)
@@ -78,8 +78,8 @@
           &kp PRCNT &kp CARET &kp LBKT &kp RBKT &kp SQT    &kp EQUAL &kp AMPS  &kp LT    &kp GT   &kp DQT
                                        &trans   &trans     &kp EQUAL &mt RGUI SEMI
         >;
-      };  
- 
+      };
+
       adjust_layer {
         // adjust, F keys, media keys, zmk BT (layer 3)
         label = "ADJ";
@@ -89,6 +89,6 @@
           &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &none      &none      &none        &none        &none      &trans
                                                 &trans       &trans     &kp K_MUTE &kp C_PLAY_PAUSE
         >;
-      };  
+      };
     };
 };

@@ -63,8 +63,8 @@ combos {
   // COMBO(jmQuot,     &kp SQT,       6 16)  // single quote
   COMBO(uiEsc,      &kp ESC,       6 7)
   COMBO(ioPipe,     &kp PIPE,      7 8)   // |
-  COMBO(olBang,     &kp EXCL,      7 17)  // !
-  COMBO(ikSplat,    &kp ASTRK,     8 18)  // *
+  COMBO(olSplat,    &kp ASTRK,     7 17)  // *
+  COMBO(ikBang,     &kp EXCL,      8 18)  // !
   COMBO(pclnTild,   &kp TILDE,     9 19)  // ~
   COMBO(asEsc,      &kp ESC,       10 11)
   COMBO(sdBspc,     &kp BSPC,      11 12)

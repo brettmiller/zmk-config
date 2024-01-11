@@ -74,7 +74,7 @@
         label = "SYM";
         bindings = <
           &kp EXCL  &kp AT    &kp LBRC &kp RBRC &kp PIPE   &kp GRAVE &kp UNDER &kp ASTRK &kp PIPE &kp TILDE
-          &kp HASH  &kp DLLR  &kp LPAR &kp RPAR &kp DQT    &kp PLUS  &kp MINUS &kp FSLH  &kp BSLH &kp SQT
+          &kp HASH  &kp DLLR  &kp LPAR &kp RPAR &kp DQT    &kp MINUS &kp PLUS  &kp FSLH  &kp BSLH &kp SQT
           &kp PRCNT &kp CARET &kp LBKT &kp RBKT &kp SQT    &kp EQUAL &kp AMPS  &kp LT    &kp GT   &kp DQT
                                        &trans   &trans     &kp EQUAL &mt RGUI SEMI
         >;

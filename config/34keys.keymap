@@ -18,6 +18,11 @@
    // tapping_term_ms = <200>;
 };
 
+&lt {
+  // enable quick tap
+  quick_tap_ms = <175>;
+};
+
 //&sk {
 //    release-after-ms = <2000>;
 //};

@@ -1,5 +1,7 @@
 #layout: {zmk_keyboard: cradio}
 #using sweep(cradio), but ortho easier to read
+#
+# In config options set combo_w: 25 & combo_h: 15 
 layout: {ortho_layout: {split: true, rows: 3, columns: 5, thumbs: 2}}
 layers:
   BASE:
@@ -7,10 +9,10 @@ layers:
   - [ {t: A, h: LCTRL}, {t: S, h: LALT}, {t: D, h: LGUI}, {t: F, h: LSHIFT} ]
   - [ G, H, {t: J, h: RSHIFT}, {t: K, h: RGUI}, {t: L, h: RALT}, {t: ;, h: RCTRL} ]
   - [ Z, X, C, V, B, N, M, ',', ., / ]
-  - [ {t: ESC, h: LGUI}, {t: SPACE, h: SYM}, {t: SPACE, h: NUM}, {t: ENTER, h: RGUI} ]
+  - [ {t: ESC, h: LGUI}, {t: SPACE, h: SYM}, {t: SPACE, h: NUM}, {t: $$mdi:keyboard-return$$, h: RGUI} ]
   NUM:
   - [ '1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
-  - [ {t: ▽, type: trans}, {t: BSPC, h: LALT}, {t: DEL, h: LGUI}, {t: +, h: LSHIFT}, '-', LEFT, DOWN, UP, RIGHT, BSPC ]
+  - [ {t: ▽, type: trans}, {t: $$mdi:backspace-outline$$, h: LALT}, {t: $$mdi:backspace-reverse-outline$$, h: LGUI}, {t: +, h: LSHIFT}, '-', $$mdi:arrow-left-thin$$, $$mdi:arrow-down-thin$$, $$mdi:arrow-up-thin$$, $$mdi:arrow-right-thin$$, $$mdi:backspace-outline$$ ]
   - [ {t: ▽, type: trans}, '=', ., '*', /, HOME, PG DN, PG UP, END, ESC, {t: ESC, h: ADJ} ]
   - [ {t: Sft+LCTRL, h: sticky}, {type: held}, {t: ▽, type: trans} ]
   SYM:
@@ -25,13 +27,13 @@ layers:
   - [ {type: held}, {t: ▽, type: trans}, {t: $$mdi:volume-off$$, type: held}, $$mdi:play-pause$$ ]
 combos:
 - { p: [16, 17], k: ':', l: [BASE] }
-- { p: [16, 17], k: entr, l: [NUM] }
-- { p: [16, 26], k: '&' }
+- { p: [16, 17], k: $$mdi:keyboard-return$$, l: [NUM] }
+- { p: [16, 26], k: '&', a: bottom, offset: -.95 }
 - { p: [15, 16], k: ^ }
 - { p: [6, 16], k: '''' }
 #- { p: [10, 13], k: {t: sft+lctrl, h: sticky} }
 #- { p: [16, 19], k: {t: sft+rctrl, h: sticky} }
-- { p: [13, 23], k: '"' }
+- { p: [13, 23], k: '"', a: bottom, offset: -.95}
 - { p: [1, 2], k: 'caps' }
 - { p: [0, 10], k: '~' }
 - { p: [1, 11], k: '@' }
@@ -45,13 +47,13 @@ combos:
 - { p: [8, 18], k: '!' }
 - { p: [9, 19], k: '~' }
 - { p: [10, 11], k: esc }
-- { p: [11, 12], k: bspc }
-- { p: [12, 13], k: del }
-- { p: [12, 23], k: {t: (, h: )} }
+- { p: [11, 12], k: $$mdi:backspace-outline$$ }
+- { p: [12, 13], k: $$mdi:backspace-reverse-outline$$ }
+- { p: [12, 23], k: {t: (, h: )}, d: true  }
 - { p: [13, 14], k: tab }
 - { p: [17, 18], k: $ }
-- { p: [17, 26], k: '"' }
-- { p: [18, 19], k: bspc }
+- { p: [17, 26], k: '"', d: true  }
+- { p: [18, 19], k: $$mdi:backspace-outline$$ }
 - { p: [22, 23], k: _ }
 - { p: [26, 27], k: '-' }
 - { p: [27, 28], k: \ }

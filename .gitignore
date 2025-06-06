@@ -1,3 +1,4 @@
 firmware/*
 firmware*
 *.u2f
+.DS_Store

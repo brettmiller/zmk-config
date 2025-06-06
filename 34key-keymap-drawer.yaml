@@ -1,0 +1,62 @@
+#layout: {zmk_keyboard: cradio}
+layout: {ortho_layout: {split: true, rows: 3, columns: 5, thumbs: 2}}
+layers:
+  BASE:
+  - [ Q, W, E, R, T, Y, U, I, O, P ]
+  - [ {t: A, h: LCTRL}, {t: S, h: LALT}, {t: D, h: LGUI}, {t: F, h: LSHIFT} ]
+  - [ G, H, {t: J, h: RSHIFT}, {t: K, h: RGUI}, {t: L, h: RALT}, {t: ;, h: RCTRL} ]
+  - [ Z, X, C, V, B, N, M, ',', ., / ]
+  - [ {t: ESC, h: LGUI}, {t: SPACE, h: SYM}, {t: SPACE, h: NUM}, {t: ENTER, h: RGUI} ]
+  NUM:
+  - [ '1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+  - [ {t: ▽, type: trans}, {t: BSPC, h: LALT}, {t: DEL, h: LGUI}, {t: +, h: LSHIFT}, '-', LEFT, DOWN, UP, RIGHT, BSPC ]
+  - [ {t: ▽, type: trans}, '=', ., '*', /, HOME, PG DN, PG UP, END, ESC, {t: ESC, h: ADJ} ]
+  - [ {t: Sft+LCTRL, h: sticky}, {type: held}, {t: ▽, type: trans} ]
+  SYM:
+  - [ '!', '@', '{', '}', '|', '`', _, '*', '|', '~', '#' ]
+  - [ $, (, ), '"', '-', +, /, \, '''' ]
+  - [  '%', ^, '[', ']', '''', '=', '&', <, '>', '"'  ]
+  - [ {t: ▽, type: trans}, {type: held}, '=', {t: ;, h: RGUI} ]
+  ADJ:
+  - [ F1, F2, F3, F4, F5, F6, F7, F8, F9, F10 ]
+  - [ {t: ▽, type: trans}, '', BRI DN, BRI UP, '', PREV, VOL DN, VOL UP, NEXT, {t: ▽, type: trans} ]
+  - [ BT CLR, {t: BT, h: '0'}, {t: BT, h: '1'}, {t: BT, h: '2'}, '', '', '', '', '', {t: ▽, type: trans} ]
+  - [ {type: held}, {t: ▽, type: trans}, {t: MUTE, type: held}, PLAY PAUSE ]
+combos:
+- { p: [16, 17], k: ':', l: [BASE] }
+- { p: [16, 17], k: entr, l: [NUM] }
+- { p: [16, 26], k: '&' }
+- { p: [15, 16], k: ^ }
+- { p: [6, 16], k: '''' }
+#- { p: [10, 13], k: {t: sft+lctrl, h: sticky} }
+#- { p: [16, 19], k: {t: sft+rctrl, h: sticky} }
+- { p: [13, 23], k: '"' }
+- { p: [1, 2], k: 'caps' }
+- { p: [0, 10], k: '~' }
+- { p: [1, 11], k: '@' }
+- { p: [2, 12], k: '#' }
+- { p: [3, 13], k: '=' }
+- { p: [4, 14], k: '%' }
+- { p: [5, 15], k: '`' }
+- { p: [6, 7], k: esc }
+- { p: [7, 8], k: '|' }
+- { p: [7, 17], k: '*' }
+- { p: [8, 18], k: '!' }
+- { p: [9, 19], k: '~' }
+- { p: [10, 11], k: esc }
+- { p: [11, 12], k: bspc }
+- { p: [12, 13], k: del }
+- { p: [12, 23], k: {t: (, h: )} }
+- { p: [13, 14], k: tab }
+- { p: [17, 18], k: $ }
+- { p: [17, 26], k: '"' }
+- { p: [18, 19], k: bspc }
+- { p: [22, 23], k: _ }
+- { p: [26, 27], k: '-' }
+- { p: [27, 28], k: \ }
+- { p: [26, 18], k: "''", a: bottom, offset: .14,  arc_scale: .9 }
+- { p: [6, 8], k: '""', a: top, offset: .14, arc_scale: .9 }
+- { p: [1, 3], k: '{}', a: top, offset: .14, arc_scale: .9 }
+- { p: [11, 23], k: '()', a: bottom, offset: .14,  arc_scale: .7  }
+- { p: [21, 23], k: '[]', a: bottom, offset: .45 }
+

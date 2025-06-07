@@ -1,7 +1,7 @@
 #layout: {zmk_keyboard: cradio}
-#using sweep(cradio), but ortho easier to read
+#using sweep(cradio), but ortho is easier to read
 #
-# In config options set combo_w: 25 & combo_h: 15 
+# In config options set combo_w: 25 & combo_h: 15
 layout: {ortho_layout: {split: true, rows: 3, columns: 5, thumbs: 2}}
 layers:
   BASE:
@@ -62,3 +62,4 @@ combos:
 - { p: [1, 3], k: '{}', a: top, offset: .14, arc_scale: .9 }
 - { p: [11, 23], k: '()', a: bottom, offset: .14,  arc_scale: .7  }
 - { p: [21, 23], k: '[]', a: bottom, offset: .45 }
+
